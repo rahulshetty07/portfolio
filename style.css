@@ -1,48 +1,75 @@
-/* Global Styles */
+/* Crazy Portfolio Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1117;
+    color: white;
     text-align: center;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+/* Glitch Effect for Name */
+.glitch {
+    font-size: 2.5em;
+    font-weight: bold;
+    position: relative;
+    color: #fff;
+    text-shadow: 3px 3px #ff00ff, -3px -3px #00ffff;
+    animation: glitch 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 3px 3px #ff00ff, -3px -3px #00ffff; }
+    50% { text-shadow: -3px -3px #ff00ff, 3px 3px #00ffff; }
+    100% { text-shadow: 3px -3px #ff00ff, -3px 3px #00ffff; }
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 1.2em;
+    color: #c9d1d9;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
 }
 
 /* Sections */
 section {
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
 }
 
-/* Project List */
-ul {
-    list-style: none;
-    padding: 0;
+/* Cards */
+.card {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px;
+    transition: transform 0.3s;
 }
 
-ul li {
-    margin: 10px 0;
+.card:hover {
+    transform: scale(1.05);
 }
 
-/* Links */
+/* Contact Links */
 a {
-    color: #333;
+    color: #00ffff;
     text-decoration: none;
-    font-weight: bold;
 }
 
 a:hover {
+    color: #ff00ff;
     text-decoration: underline;
 }
 
@@ -53,4 +80,12 @@ footer {
     color: white;
     padding: 10px;
     font-size: 14px;
+}
+
+/* Particle Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }

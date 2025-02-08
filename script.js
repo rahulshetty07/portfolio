@@ -1,19 +1,16 @@
-// Ensure the DOM is fully loaded before running scripts
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Portfolio Loaded Successfully!");
+    console.log("Welcome to the Crazy Portfolio! 🚀");
 
-    // Dynamically update the portfolio title
-    let titleElement = document.getElementById("portfolio-title");
-    if (titleElement) {
-        titleElement.innerText = "Rahul Shetty | AI Engineer";
-    }
-
-    // Add event listeners for project links
-    let projectLinks = document.querySelectorAll("#projects ul li a");
-    projectLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            alert("This project will be added soon. Stay tuned!");
-        });
+    // Particles.js Configuration
+    particlesJS("particles-js", {
+        "particles": {
+            "number": { "value": 100 },
+            "color": { "value": "#ffffff" },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": true },
+            "size": { "value": 3, "random": true },
+            "line_linked": { "enable": false },
+            "move": { "enable": true, "speed": 3 }
+        }
     });
 });
